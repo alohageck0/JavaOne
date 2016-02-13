@@ -7,5 +7,6 @@ public class Challenge {
         short shortTotal = (short) (1000 + 10 * (myByte + myShort + myInt));
         System.out.println(myLong);
         System.out.println(shortTotal);
+
     }
 }
