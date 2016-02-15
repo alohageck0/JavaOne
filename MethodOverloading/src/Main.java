@@ -8,6 +8,7 @@ public class Main {
       System.out.println(calcFeetAndInchesToCentimeters(6, 0));
       System.out.println(calcFeetAndInchesToCentimeters(0, 5));
       System.out.println(calcFeetAndInchesToCentimeters(66));
+      System.out.println(calcFeetAndInchesToCentimeters(-10));
 
    }
 
