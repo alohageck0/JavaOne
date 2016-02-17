@@ -20,6 +20,10 @@ public class Account {
       System.out.println("With params");
    }
 
+   public Account(String customerName, String email, String phone) {
+      this(9999, 155, customerName, email, phone);
+   }
+
    public int getAccNumber() {
       return accNumber;
    }
