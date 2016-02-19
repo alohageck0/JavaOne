@@ -7,6 +7,7 @@ public class Challenge {
       wrx.slowDown(15);
       wrx.turnLeft();
       wrx.turnRight();
+      wrx.slowDown(200);
    }
 
 }

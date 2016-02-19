@@ -10,4 +10,18 @@ public class Subaru extends Car {
       this.turbo = turbo;
    }
 
+   @Override
+   public void startMove(int speed) {
+      super.startMove(speed);
+   }
+
+   @Override
+   public void speedUp(int speed) {
+      super.speedUp(speed);
+   }
+
+   @Override
+   public void slowDown(int speed) {
+      super.slowDown(speed);
+   }
 }

@@ -25,4 +25,13 @@ public class Vehicle {
       System.out.println("Vehicle.damage callede");
    }
 
+   public void turnLeft() {
+      System.out.println("Car turning left");
+   }
+
+   public void turnRight() {
+      System.out.println("Car turning right");
+   }
+
+
 }

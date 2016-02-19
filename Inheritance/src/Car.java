@@ -22,7 +22,7 @@ public class Car extends Vehicle {
    }
 
    public void changeGear(String gear) {
-      if (gear == this.currentGear) {
+      if (gear.equals(this.currentGear)) {
          System.out.println("Current gear " + this.currentGear);
       } else {
          this.currentGear = gear;
@@ -31,13 +31,6 @@ public class Car extends Vehicle {
 
    }
 
-   public void turnLeft() {
-      System.out.println("Car turning left");
-   }
-
-   public void turnRight() {
-      System.out.println("Car turning right");
-   }
 
    public String selectGear(int speed) {
       if (speed == 0) {
@@ -93,6 +86,7 @@ public class Car extends Vehicle {
 
    @Override
    public void move(int speed) {
+      super.move(speed);
       System.out.println("Car is moving. Car's speed " + speed);
       System.out.println();
    }
