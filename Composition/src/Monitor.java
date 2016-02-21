@@ -11,7 +11,7 @@ public class Monitor {
       this.nativeResolution = nativeResolution;
    }
 
-   private void drawPixelAt(int x, int y, String color) {
+   public void drawPixelAt(int x, int y, String color) {
       System.out.println("Drawing pixel at " + x + ", " + y + " with color " + color);
    }
 
