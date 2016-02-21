@@ -18,14 +18,11 @@ public class Main {
 //      System.out.println("Health is " + player.getHealth());
 
       Printer epson = new Printer(60, false);
-      epson.printPage(14);
-      epson.getPagesPrinted();
-      System.out.println(epson.getTonerLevel());
-      epson.fillUpToner();
-      System.out.println(epson.getTonerLevel());
+      System.out.println("Initial page count = " + epson.getPagesPrinted());
+      int pagesprinted = epson.printPage(4);
+      System.out.println("pages printed " + pagesprinted + " new total " + epson.getPagesPrinted());
+      pagesprinted = epson.printPage(16);
 
-      epson.printPage(200);
-      System.out.println(epson.getTonerLevel());
-
+      System.out.println("pages printed " + pagesprinted + " new total " + epson.getPagesPrinted());
    }
 }
