@@ -21,5 +21,9 @@ public class Dimensions {
       this.depth = depth;
    }
 
+   public Dimensions(int width, int height) {
+      this(width, height, 0);
+   }
+
    private int depth;
 }
