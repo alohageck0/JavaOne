@@ -41,7 +41,7 @@ class Subaru extends Car {
 
    @Override
    public String pressBreak() {
-      return "Subaru pressed break";
+      return getName() +" pressed break";
    }
 
    @Override
