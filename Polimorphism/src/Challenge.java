@@ -11,17 +11,11 @@ class Car {
       this.wheels = 4;
    }
 
-   public boolean isEngine() {
-      return engine;
-   }
 
    public int getCylinders() {
       return cylinders;
    }
 
-   public int getWheels() {
-      return wheels;
-   }
 
    public String getName() {
       return name;
