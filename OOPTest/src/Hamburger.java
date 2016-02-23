@@ -1,28 +1,40 @@
 public class Hamburger {
    private String roll;
    private String meat;
-   private double price;
+   private double basePrice;
+   private double total;
    private String addition1;
    private String addition2;
    private String addition3;
    private String addition4;
+   private String additions;
 
    public Hamburger(String roll, String meat, double price) {
       this.roll = roll;
       this.meat = meat;
-      this.price = price;
+      this.total = price;
+      this.basePrice = price;
+      this.additions = "";
    }
 
    public void addAdditionToPrice(String addition) {
       if (addition.toLowerCase().equals("lettuce")) {
-         this.price += 0.5;
+         this.total += 0.5;
+         setAdditions(this.additions.concat(addition + " 0.5\n"));
       } else if (addition.toLowerCase().equals("tomato")) {
-         this.price += 0.3;
+         this.total += 0.3;
+         setAdditions(this.additions.concat(addition + " 0.3\n"));
+
       } else if (addition.toLowerCase().equals("onion")) {
-         this.price += 0.4;
+         this.total += 0.4;
+         setAdditions(this.additions.concat(addition + " 0.4\n"));
+
       } else if (addition.toLowerCase().equals("ketchup")) {
-         this.price += 0.1;
+         this.total += 0.1;
+         setAdditions(this.additions.concat(addition + " 0.1\n"));
+
       } else {
+         System.out.println("No such ingredient");
 
       }
    }
@@ -50,15 +62,33 @@ public class Hamburger {
 
    }
 
-   public double getPrice() {
-      System.out.println(this.price);
-      return price;
+   public double getTotal() {
+
+//      System.out.println(this.total);
+      return total;
 
    }
 
-   public void setPrice(double price) {
-      this.price = price;
+   public void printTotal() {
+      System.out.println("Base price = " + getBasePrice() + "\n" + getAdditions() + "Total = " + getTotal() + "\n");
    }
+
+   public void setTotal(double total) {
+      this.total = total;
+   }
+
+   public String getAdditions() {
+      return additions;
+   }
+
+   public double getBasePrice() {
+      return basePrice;
+   }
+
+   public void setAdditions(String additions) {
+      this.additions = additions;
+   }
+
    //
 //   public String getAddition1() {
 //      return addition1;
