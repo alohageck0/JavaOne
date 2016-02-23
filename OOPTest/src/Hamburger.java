@@ -14,15 +14,16 @@ public class Hamburger {
    }
 
    public void addAdditionToPrice(String addition) {
-      String test = addition.toLowerCase();
-      if (test.equals("lettuce")) {
+      if (addition.toLowerCase().equals("lettuce")) {
          this.price += 0.5;
-      } else if (test.equals("tomato")) {
+      } else if (addition.toLowerCase().equals("tomato")) {
          this.price += 0.3;
-      } else if (test.equals("onion")) {
+      } else if (addition.toLowerCase().equals("onion")) {
          this.price += 0.4;
-      } else if (test.equals("ketchup")) {
+      } else if (addition.toLowerCase().equals("ketchup")) {
          this.price += 0.1;
+      } else {
+
       }
    }
 
@@ -48,4 +49,31 @@ public class Hamburger {
       addAdditionToPrice(addition4);
 
    }
+
+   public double getPrice() {
+      System.out.println(this.price);
+      return price;
+
+   }
+
+   public void setPrice(double price) {
+      this.price = price;
+   }
+   //
+//   public String getAddition1() {
+//      return addition1;
+//   }
+//
+//   public String getAddition2() {
+//      return addition2;
+//   }
+//
+//   public String getAddition3() {
+//      return addition3;
+//   }
+//
+//   public String getAddition4() {
+//      return addition4;
+//   }
+
 }
