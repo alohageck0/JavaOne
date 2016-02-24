@@ -14,6 +14,15 @@ public class GrocerieList {
       }
    }
 
+   public String findItem(String searchItem) {
+//      boolean exists = groceryList.contains(searchItem);
+      int position = groceryList.indexOf(searchItem);
+      if (position >= 0) {
+         return groceryList.get(position);
+      }
+      return null;
+   }
+
    public void modifyItem(int position, String newItem) {
       groceryList.set(position, newItem);
       System.out.println("Grocery item " + (position + 1) + " has modified");
