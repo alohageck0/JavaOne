@@ -42,7 +42,7 @@ public class Main {
    private static void searchForItem() {
       System.out.println("Enter item to search for ");
       String searchItem = scanner.nextLine();
-      if (grocerieList.findItem(searchItem) != null) {
+      if (grocerieList.onFile(searchItem)) {
          System.out.println("Found " + searchItem + " in our grocery list");
       } else {
          System.out.println(searchItem + " not found");
@@ -51,18 +51,18 @@ public class Main {
 
    private static void removeItem() {
       System.out.print("Enter item number ");
-      int itemNo = scanner.nextInt();
+      String itemNo = scanner.nextLine();
       scanner.nextLine();
-      grocerieList.removeGroceryItem(itemNo - 1);
+      grocerieList.removeGroceryItem(itemNo);
    }
 
    private static void modifyItem() {
       System.out.print("Enter item number ");
-      int itemNo = scanner.nextInt();
+      String itemNo = scanner.nextLine();
       scanner.nextLine();
       System.out.print("Enter relplacement item ");
       String newItem = scanner.nextLine();
-      grocerieList.modifyItem(itemNo - 1, newItem);
+      grocerieList.modifyGroceryItem(itemNo, newItem);
    }
 
    private static void addItem() {
@@ -73,4 +73,5 @@ public class Main {
    public static void printInstuctions() {
 
    }
+
 }
