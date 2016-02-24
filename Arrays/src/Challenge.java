@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Challenge {
@@ -42,10 +43,11 @@ public class Challenge {
    }
 
    public static int[] sortArray(int[] array) {
-      int[] sorted = new int[array.length];
-      for (int i = 0; i < sorted.length; i++) {
-         sorted[i] = array[i];
-      }
+      int[] sorted = Arrays.copyOf(array, array.length);
+//      int[] sorted = new int[array.length];
+//      for (int i = 0; i < sorted.length; i++) {
+//         sorted[i] = array[i];
+//      }
       boolean flag = true;
       int temp;
       while (flag) {
