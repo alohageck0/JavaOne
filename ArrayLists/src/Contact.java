@@ -18,4 +18,8 @@ public class Contact {
    public void printContact() {
       System.out.println("Name: " + this.name + "\nPhone: " + this.phone + "\n");
    }
+
+   public static Contact createContact(String name, String phone) {
+      return new Contact(name, phone);
+   }
 }
