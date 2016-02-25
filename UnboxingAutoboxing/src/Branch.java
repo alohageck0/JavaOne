@@ -9,7 +9,7 @@ public class Branch {
       this.customers = new ArrayList<>();
    }
 
-   public Branch createBranch(String name) {
+   public static Branch createBranch(String name) {
       Branch newBranch = new Branch(name);
       return newBranch;
    }
@@ -19,13 +19,23 @@ public class Branch {
          System.out.println("Customer already exists");
          return false;
       }
+
       this.customers.add(newCustomer);
       return true;
+   }
+
+   public ArrayList<Customer> getCustomers() {
+      return customers;
    }
 
    public int findCustomer(Customer customer) {
       return this.customers.indexOf(customer);
    }
+
+   public String getName() {
+      return name;
+   }
+
 
    public int findCustomer(String name) {
       for (int i = 0; i < this.customers.size(); i++) {
@@ -35,5 +45,12 @@ public class Branch {
          }
       }
       return -1;
+   }
+
+   public void printCustomers() {
+      System.out.println("List of customers of branch " + this.name + ":");
+      for (int i = 0; i < customers.size(); i++) {
+         System.out.println(customers.get(i));
+      }
    }
 }

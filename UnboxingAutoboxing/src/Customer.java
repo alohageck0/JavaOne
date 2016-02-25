@@ -22,6 +22,10 @@ public class Customer {
       return transactions;
    }
 
+   public void addTransaction(double transaction) {
+      this.transactions.add(transaction);
+   }
+
    public void printTransactions() {
       System.out.println("List of transactions for customer " + this.name + ":");
       for (int i = 0; i < transactions.size(); i++) {
