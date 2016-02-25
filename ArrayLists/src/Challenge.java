@@ -6,7 +6,7 @@ public class Challenge {
 
    public static void main(String[] args) {
       boolean quit = false;
-      int choice = 0;
+      int choice;
       printInstructions();
       while (!quit) {
          System.out.println("Enter you choice: ");
@@ -34,8 +34,10 @@ public class Challenge {
                break;
             case 6:
                iphone.deleteContact();
+               break;
             case 7:
                iphone.findContact();
+               break;
          }
       }
    }
