@@ -62,7 +62,7 @@ public class Challenge {
          System.out.println("Customer not found");
          return;
       }
-      System.out.println("Enter initial transaction: ");
+      System.out.println("Enter transaction amount: ");
       double transaction = scanner.nextDouble();
       existingCustomer.addTransaction(transaction);
       System.out.println("Transaction " + transaction + " added to customer ->" + existingCustomer.getName());
@@ -89,8 +89,8 @@ public class Challenge {
       System.out.println("Enter Customer name: ");
       String customerName = scanner.nextLine();
       Customer existingCustomer = existingBranch.queryCustomer(customerName);
-      if (existingCustomer == null) {
-         System.out.println("Customer not found");
+      if (existingCustomer != null) {
+         System.out.println("Customer already exists");
          return;
       }
       System.out.println("Enter initial transaction: ");

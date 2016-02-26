@@ -59,6 +59,7 @@ public class Branch {
       System.out.println("List of customers of branch " + this.name + ":");
       for (int i = 0; i < customers.size(); i++) {
          System.out.println(customers.get(i).getName());
+         customers.get(i).printTransactions();
       }
    }
 }
