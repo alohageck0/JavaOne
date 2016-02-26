@@ -47,10 +47,18 @@ public class Branch {
       return -1;
    }
 
+   public Customer queryCustomer(String name) {
+      int position = findCustomer(name);
+      if (position >= 0) {
+         return this.customers.get(position);
+      }
+      return null;
+   }
+
    public void printCustomers() {
       System.out.println("List of customers of branch " + this.name + ":");
       for (int i = 0; i < customers.size(); i++) {
-         System.out.println(customers.get(i));
+         System.out.println(customers.get(i).getName());
       }
    }
 }

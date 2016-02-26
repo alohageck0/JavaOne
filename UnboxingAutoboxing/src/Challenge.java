@@ -14,7 +14,7 @@ public class Challenge {
 
          switch (choice) {
             case 0:
-               System.out.println("Shuttting down... ");
+               System.out.println("Shutting down... ");
                quit = true;
                break;
             case 1:
@@ -23,20 +23,49 @@ public class Challenge {
             case 2:
                addCustomerToBranch();
                break;
-//            case 3:
-//               updateContact();
-//               break;
-//            case 4:
-//               removeContact();
-//               break;
-//            case 5:
-//               queryContact();
-//               break;
-//            case 6:
-//               printInstructions();
-//               break;
+            case 3:
+               addTransactionToCustomer();
+               break;
+            case 4:
+               printListOfCustomers();
+               break;
+            case 5:
+               printInstructions();
+               break;
          }
       }
+   }
+
+   private static void printListOfCustomers() {
+      System.out.println("Enter branch name: ");
+      String branchName = scanner.nextLine();
+      Branch existingBranch = chase.queryBranch(branchName);
+      if (existingBranch == null) {
+         System.out.println("Branch not found");
+         return;
+      }
+      existingBranch.printCustomers();
+   }
+
+   private static void addTransactionToCustomer() {
+      System.out.println("Enter branch name: ");
+      String branchName = scanner.nextLine();
+      Branch existingBranch = chase.queryBranch(branchName);
+      if (existingBranch == null) {
+         System.out.println("Branch not found");
+         return;
+      }
+      System.out.println("Enter Customer name: ");
+      String customerName = scanner.nextLine();
+      Customer existingCustomer = existingBranch.queryCustomer(customerName);
+      if (existingCustomer == null) {
+         System.out.println("Customer not found");
+         return;
+      }
+      System.out.println("Enter initial transaction: ");
+      double transaction = scanner.nextDouble();
+      existingCustomer.addTransaction(transaction);
+      System.out.println("Transaction " + transaction + " added to customer ->" + existingCustomer.getName());
    }
 
    public static void addBranch() {
@@ -59,6 +88,11 @@ public class Challenge {
       }
       System.out.println("Enter Customer name: ");
       String customerName = scanner.nextLine();
+      Customer existingCustomer = existingBranch.queryCustomer(customerName);
+      if (existingCustomer == null) {
+         System.out.println("Customer not found");
+         return;
+      }
       System.out.println("Enter initial transaction: ");
       double transaction = scanner.nextDouble();
       Customer customer = Customer.createCustomer(customerName, transaction);
@@ -66,19 +100,13 @@ public class Challenge {
 
    }
 
-//   public static void printCustomers() {
-//      System.out.println("Enter branch name: ");
-//      String branchName = scanner.nextLine();
-//      chase.printCustomers(chase.);
-//
-//   }
 
    public static void printInstructions() {
       System.out.println("\nAvailable operations");
       System.out.println("0 - Quit");
       System.out.println("1 - Add branch");
       System.out.println("2 - Add customer to branch");
-      System.out.println("3 - Add transaction to costomer of branch");
+      System.out.println("3 - Add transaction to customer of branch");
       System.out.println("4 - Print list of customers of branch");
       System.out.println("5 - Print instructions");
       System.out.println("Choose your operation");
