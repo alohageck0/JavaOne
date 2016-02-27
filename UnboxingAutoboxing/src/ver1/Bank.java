@@ -57,7 +57,7 @@ public class Bank {
             if (showTransactions) {
                System.out.println("Transactions for customer " + branchCustomer.getName());
                ArrayList<Double> trans = branchCustomer.getTransactions();
-               for (int j = 0; i < trans.size(); j++) {
+               for (int j = 0; j < trans.size(); j++) {
                   System.out.println("[" + (j + 1) + "] Amount " + trans.get(j));
                }
             }
