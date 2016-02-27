@@ -21,13 +21,21 @@ public class Main {
 
       bank.listCustomers("Adelaide", true);
       bank.listCustomers("Sydney", true);
-bank.addBranch("Melbourne");
-      if(!bank.addCustomer("Melbourne", "Brian", 5.54)){
+      bank.addBranch("Melbourne");
+      if (!bank.addCustomer("Melbourne", "Brian", 5.54)) {
          System.out.println("error branch does not exist");
       }
 
-      if (!bank.addBranch("Adelaide")){
+      if (!bank.addBranch("Adelaide")) {
          System.out.println("Error");
+      }
+
+      if (!bank.addCustomerTransaction("Adelaide","Fergus", 42.3)){
+         System.out.println("Customer does not exist");
+      }
+
+      if (!bank.addCustomer("Adelaide","Tim", 434)){
+         System.out.println("Error customer already exists");
       }
    }
 }
