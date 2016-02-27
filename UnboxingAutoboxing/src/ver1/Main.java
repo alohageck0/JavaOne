@@ -20,5 +20,14 @@ public class Main {
       bank.addCustomerTransaction("Adelaide", "Mike", 32399);
 
       bank.listCustomers("Adelaide", true);
+      bank.listCustomers("Sydney", true);
+bank.addBranch("Melbourne");
+      if(!bank.addCustomer("Melbourne", "Brian", 5.54)){
+         System.out.println("error branch does not exist");
+      }
+
+      if (!bank.addBranch("Adelaide")){
+         System.out.println("Error");
+      }
    }
 }
