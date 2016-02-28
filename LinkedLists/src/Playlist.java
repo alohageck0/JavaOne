@@ -1,5 +1,6 @@
 import java.util.LinkedList;
 import java.util.ListIterator;
+import java.util.Scanner;
 
 public class Playlist {
    private String playlistName;
@@ -35,7 +36,9 @@ public class Playlist {
       }
    }
 
-   public boolean playPlaylist() {
+   public void playPlaylist() {
+      Scanner scanner = new Scanner(System.in);
+      boolean goingForward = true;
       boolean quit = true;
       ListIterator<Song> listIterator = this.songsPlaylist.listIterator();
       if (songsPlaylist.isEmpty()) {
@@ -44,11 +47,39 @@ public class Playlist {
          System.out.println("Now playing " + listIterator.next().songInfo());
          printMenu();
       }
-//      while (quit) {
-//
-//      }
-      return true;
+      while (quit) {
+         int action = scanner.nextInt();
+         scanner.nextLine();
+         switch (action) {
+            case 0:
+               quit = false;
+               break;
+            case 1:
+//               skipToNext();
+               if (!goingForward) {
+                  if (listIterator.hasNext()) {
+                     System.out.println("Now playing " + listIterator.next().songInfo());
+                  } else {
+                     System.out.println("No more songs in playlist");
+                     goingForward = false;
+                  }
+
+               }
+               if (listIterator.hasNext()) {
+                  System.out.println(listIterator.previous().getSongTitle() + " skipped");
+                  System.out.println("Now playing " + listIterator.next().songInfo());
+               }
+               break;
+            case 2:
+//               skipToPrevious();
+               break;
+            case 3:
+//               replay();
+               break;
+         }
+      }
    }
+
 
    private static void printMenu() {
       System.out.println("Available actions: \npress");

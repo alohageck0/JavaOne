@@ -65,7 +65,7 @@ public class Demo {
                if (!goingForward) {
                   if (listIterator.hasNext()) {
 
-                     listIterator.hasNext();
+                     listIterator.next();
                   }
                   goingForward = true;
                }
