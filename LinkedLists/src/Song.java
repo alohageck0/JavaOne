@@ -24,6 +24,6 @@ public class Song {
    }
 
    public String songInfo() {
-      return this.getDuration() + "  " + this.getSongTitle();
+      return this.getDuration() + " - " + this.getSongTitle();
    }
 }
