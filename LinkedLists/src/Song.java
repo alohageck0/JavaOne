@@ -22,4 +22,8 @@ public class Song {
    public void setSongTitle(String songTitle) {
       this.songTitle = songTitle;
    }
+
+   public String songInfo() {
+      return this.getDuration() + "  " + this.getSongTitle();
+   }
 }
