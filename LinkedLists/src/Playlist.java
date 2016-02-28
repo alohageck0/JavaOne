@@ -67,6 +67,7 @@ public class Playlist {
 //                  Song currentSong = listIterator.next();
                   System.out.println(listIterator.previous().getSongTitle() + " skipped");
 //                  System.out.println("Now playing " + currentSong.songInfo());
+                  //todo think about
                } else {
                   System.out.println("No more songs");
                   goingForward = false;
