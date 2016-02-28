@@ -59,15 +59,17 @@ public class Playlist {
                if (!goingForward) {
                   if (listIterator.hasNext()) {
                      System.out.println("Now playing " + listIterator.next().songInfo());
-                  } else {
-                     System.out.println("No more songs in playlist");
-                     goingForward = false;
                   }
+                  goingForward = true;
 
                }
                if (listIterator.hasNext()) {
+//                  Song currentSong = listIterator.next();
                   System.out.println(listIterator.previous().getSongTitle() + " skipped");
-                  System.out.println("Now playing " + listIterator.next().songInfo());
+//                  System.out.println("Now playing " + currentSong.songInfo());
+               } else {
+                  System.out.println("No more songs");
+                  goingForward = false;
                }
                break;
             case 2:
