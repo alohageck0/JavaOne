@@ -25,4 +25,12 @@ public class Playlist {
       }
       return false;
    }
+
+   public void printPlaylist() {
+      System.out.println("Playlist: ");
+      for (int i = 0; i < songsPlaylist.size(); i++) {
+         Song song = songsPlaylist.get(i);
+         System.out.println((i + 1) + ". " + song.getDuration() + " " + songsPlaylist.get(i).getSongTitle());
+      }
+   }
 }
