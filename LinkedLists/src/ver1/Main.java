@@ -119,6 +119,16 @@ public class Main {
             case 5:
                printMenu();
                break;
+            case 6:
+               if (playlist.size() > 0) {
+                  listIterator.remove();
+                  if (listIterator.hasNext()) {
+                     System.out.println("Now relpaying " + listIterator.next().toString());
+                  } else if (listIterator.hasPrevious()) {
+                     System.out.println("now Replaying " + listIterator.previous().toString());
+                  }
+               }
+               break;
          }
       }
 
@@ -140,7 +150,8 @@ public class Main {
               "2 - play previous song\n" +
               "3 - replay current song\n" +
               "4 - list songs in the playlist\n" +
-              "5 print available actions");
+              "5 print available actions\n" +
+              "6 - remove current track");
    }
 
 }
