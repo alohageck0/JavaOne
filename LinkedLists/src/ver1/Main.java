@@ -1,9 +1,6 @@
 package ver1;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.ListIterator;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
@@ -58,6 +55,8 @@ public class Main {
          System.out.println("No songs in playlist");
       } else {
          System.out.println("Now playing " + listIterator.next().toString());
+         printMenu();
+
       }
 
       while (!quit) {
@@ -98,16 +97,50 @@ public class Main {
                }
                break;
             case 3:
-
+               if (forward) {
+                  if (listIterator.hasPrevious()) {
+                     System.out.println("now Replaying " + listIterator.previous().toString());
+                     forward = false;
+                  } else {
+                     System.out.println("Wea are at the start");
+                  }
+               } else {
+                  if (listIterator.hasNext()) {
+                     System.out.println("Now relpaying " + listIterator.next().toString());
+                     forward = true;
+                  } else {
+                     System.out.println("We have reached the end of th list");
+                  }
+               }
                break;
             case 4:
-//               printList(playlist);
+               printList(playlist);
                break;
             case 5:
-//               printMenu();
+               printMenu();
                break;
          }
       }
 
    }
+
+   private static void printList(LinkedList<Song> playlist) {
+      Iterator<Song> iterator = playlist.iterator();
+      System.out.println("==========");
+      while (iterator.hasNext()) {
+         System.out.println(iterator.next().toString());
+      }
+      System.out.println("==========");
+   }
+
+   private static void printMenu() {
+      System.out.println("Available actions: \npress");
+      System.out.println("0 - to quit\n" +
+              "1 - play the next song\n" +
+              "2 - play previous song\n" +
+              "3 - replay current song\n" +
+              "4 - list songs in the playlist\n" +
+              "5 print available actions");
+   }
+
 }
