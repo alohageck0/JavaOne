@@ -1,4 +1,4 @@
-package verPlaylist;
+package Interfaces.verPlaylist;
 
 public class Song {
    private String title;

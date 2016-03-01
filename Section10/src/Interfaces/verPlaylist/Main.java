@@ -1,4 +1,4 @@
-package verPlaylist;
+package Interfaces.verPlaylist;
 
 import java.util.*;
 
