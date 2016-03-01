@@ -6,5 +6,11 @@ public class Main {
       timsPhone.powerOn();
       timsPhone.callPhone(123123123);
       timsPhone.answer();
+
+
+      timsPhone = new MobilePhone(234234);
+      timsPhone.powerOn();
+      timsPhone.callPhone(234234);
+      timsPhone.answer();
    }
 }
