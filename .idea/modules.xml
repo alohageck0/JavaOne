@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Section10/111.iml" filepath="$PROJECT_DIR$/Section10/111.iml" />
       <module fileurl="file://$PROJECT_DIR$/ArrayLists/ArrayLists.iml" filepath="$PROJECT_DIR$/ArrayLists/ArrayLists.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arrays/Arrays.iml" filepath="$PROJECT_DIR$/Arrays/Arrays.iml" />
       <module fileurl="file://$PROJECT_DIR$/ByteShortInt/ByteShortInt.iml" filepath="$PROJECT_DIR$/ByteShortInt/ByteShortInt.iml" />
@@ -17,7 +16,6 @@
       <module fileurl="file://$PROJECT_DIR$/Ifkeyword/Ifkeyword.iml" filepath="$PROJECT_DIR$/Ifkeyword/Ifkeyword.iml" />
       <module fileurl="file://$PROJECT_DIR$/Inheritance/Inheritance.iml" filepath="$PROJECT_DIR$/Inheritance/Inheritance.iml" />
       <module fileurl="file://$PROJECT_DIR$/Section10/Interface.iml" filepath="$PROJECT_DIR$/Section10/Interface.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Section10/Interfaces.iml" filepath="$PROJECT_DIR$/Section10/Interfaces.iml" />
       <module fileurl="file://$PROJECT_DIR$/LinkedLists/LinkedLists.iml" filepath="$PROJECT_DIR$/LinkedLists/LinkedLists.iml" />
       <module fileurl="file://$PROJECT_DIR$/MethodOverloading/MethodOverloading.iml" filepath="$PROJECT_DIR$/MethodOverloading/MethodOverloading.iml" />
       <module fileurl="file://$PROJECT_DIR$/Methods/Methods.iml" filepath="$PROJECT_DIR$/Methods/Methods.iml" />
