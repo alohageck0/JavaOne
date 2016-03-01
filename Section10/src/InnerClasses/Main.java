@@ -7,6 +7,8 @@ public class Main {
    public static Button buttonPrint = new Button("Print");
 
    public static void main(String[] args) {
+      //Inner class example
+
 //      GearBox mcLaren = new GearBox(6);
 //      mcLaren.operateClutch(true);
 //      mcLaren.changeGear(1);
@@ -19,18 +21,29 @@ public class Main {
 //      mcLaren.operateClutch(false);
 //      System.out.println(mcLaren.wheelSpeed(6000));
 
-      class CliclListener implements Button.OnClickListener {
-         public CliclListener() {
-            System.out.println("I have been attached");
-         }
+      //Local class example
 
+//      class CliclListener implements Button.OnClickListener {
+//         public CliclListener() {
+//            System.out.println("I have been attached");
+//         }
+//
+//         @Override
+//         public void onClick(String title) {
+//            System.out.println(title + " was clicked");
+//         }
+//      }
+
+//      buttonPrint.setOnClickListener(new CliclListener());
+
+      //Anonymous class example
+
+      buttonPrint.setOnClickListener(new Button.OnClickListener() {
          @Override
          public void onClick(String title) {
             System.out.println(title + " was clicked");
          }
-      }
-
-      buttonPrint.setOnClickListener(new CliclListener());
+      });
       listen();
    }
 
