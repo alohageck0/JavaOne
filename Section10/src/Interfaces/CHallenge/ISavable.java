@@ -5,6 +5,6 @@ import java.util.ArrayList;
 public interface ISavable {
    ArrayList<String> returnList();
 
-   void populateFields(String values);
+   void populateFields(Object arrayList);
 
 }
