@@ -14,8 +14,14 @@ public class Main {
       System.out.println(tim.toString());
       tim.setWeapon("Axe");
       saveObject(tim);
-      loadObject(tim);
+//      loadObject(tim);
       System.out.println(tim.toString());
+
+
+      ISavable werfolf = new Monster("Warewolf", 25, 44);
+      System.out.println("Strength " + ((Monster) werfolf).getStrength());
+      saveObject(werfolf);
+
 
    }
 
