@@ -1,23 +1,15 @@
 package Generics;
 
-import java.util.ArrayList;
 
 public class Main {
    public static void main(String[] args) {
-      ArrayList<Integer> items = new ArrayList<>();
-      items.add(1);
-      items.add(2);
-      items.add(3);
-      items.add(4);
-//      items.add("name");
-      items.add(5);
-      printDoubled(items);
+      FootballPlayer joe = new FootballPlayer("Joe");
+      BaseBallPlayer pat = new BaseBallPlayer("Pat");
+      SoccerPlayer backham = new SoccerPlayer("Backham");
 
-   }
-
-   private static void printDoubled(ArrayList<Integer> items) {
-      for (int i : items) {
-         System.out.println( i * 2);
-      }
+      Team adelaideCrows = new Team("Crows");
+      adelaideCrows.addPlayer(joe);
+      adelaideCrows.addPlayer(pat);
+      adelaideCrows.addPlayer(backham);
    }
 }
