@@ -53,6 +53,34 @@ public class MyLinkedList implements NodeList {
 
    @Override
    public boolean removeItem(ListItem listItem) {
+      if (listItem != null) {
+         System.out.println("Deleting item " + listItem.getValue());
+      }
+      ListItem currentItem = this.root;
+      while (currentItem != null) {
+         int comparison = currentItem.compareTo(listItem);
+         if (comparison == 0) {
+            // found item to delete
+            if (currentItem == this.root) {
+               this.root = currentItem.next();
+            } else {
+               currentItem.previous().setNext(currentItem.next());
+               if (currentItem.next() != null) {
+                  currentItem.next().setPrevious(currentItem.previous());
+               }
+            }
+            return true;
+         } else if (comparison < 0) {
+            currentItem = currentItem.next();
+
+         } else {
+            // comparison greater > 0
+            //we are at the item greater than one to be deleted
+            // so the item is not in the list
+            return false;
+         }
+      }
+      // we have reached end of the list without finding
       return false;
    }
 
