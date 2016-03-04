@@ -4,6 +4,7 @@ import Generics.Player;
 import Generics.Team;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class League<T extends Player>{
     private ArrayList<Team<T>> teams;
@@ -33,6 +34,14 @@ public class League<T extends Player>{
             }
         }
         return null;
+    }
+    public void printTeams(){
+        Collections.sort(teams);
+        for (Team team:this.teams
+             ) {
+            System.out.println(team.getName() + " has rank: "+ team.getRank());
+
+        }
     }
 }
 

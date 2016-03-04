@@ -9,6 +9,7 @@ public class Team<T extends Player> implements Comparable<Team<T>> {
    int won = 0;
    int lost = 0;
    int tied = 0;
+   int rank;
 
 
    private ArrayList<T> members = new ArrayList<>();
@@ -19,6 +20,10 @@ public class Team<T extends Player> implements Comparable<Team<T>> {
 
    public String getName() {
       return name;
+   }
+
+   public int getRank() {
+      return rank;
    }
 
    public boolean addPlayer(T player) {
@@ -40,7 +45,7 @@ public class Team<T extends Player> implements Comparable<Team<T>> {
       String message;
       if (ourScore > theirScore) {
          won++;
-         message = "beat";
+         message = " beat ";
       } else if (ourScore == theirScore) {
          tied++;
          message = " drew with ";
@@ -52,6 +57,7 @@ public class Team<T extends Player> implements Comparable<Team<T>> {
          System.out.println(this.name + message + opponent.getName());
          opponent.matchResult(null, theirScore, ourScore);
       }
+      rank = (won * 2) + tied;
    }
 
    public int ranking() {
