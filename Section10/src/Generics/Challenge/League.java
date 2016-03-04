@@ -2,7 +2,6 @@ package Generics.Challenge;
 
 import Generics.Player;
 import Generics.Team;
-
 import java.util.ArrayList;
 import java.util.Collections;
 
