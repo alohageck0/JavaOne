@@ -1,7 +1,6 @@
 package Generics;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Team<T extends Player> implements Comparable<Team<T>> {
    private String name;
