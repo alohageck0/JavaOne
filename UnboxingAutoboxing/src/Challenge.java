@@ -1,4 +1,4 @@
-package test;
+import test.Bank;
 
 import java.util.Scanner;
 
