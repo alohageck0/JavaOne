@@ -2,14 +2,19 @@ package Scope;
 
 public class Main {
    public static void main(String[] args) {
-      String privateVar = "this is private to main()";
-      ScopeCheck scopeInstance = new ScopeCheck();
-      System.out.println("Scope instance privateVar is " + scopeInstance.getPrivateVar());
-      System.out.println(privateVar);
+      String var4 = "this is private to main()";
 
-      scopeInstance.timesTwo();
-      System.out.println("******");
+      ScopeCheck scopeInstance = new ScopeCheck();
+      scopeInstance.useInner();
+
       ScopeCheck.InnerClass innerClass = scopeInstance.new InnerClass();
-      innerClass.timesTwo();
+//      System.out.println("varThree is not accesible here "+ innerClass.varThree);
+//      System.out.println("Scope instance varOne is " + scopeInstance.getVarOne());
+//      System.out.println(var4);
+//
+//      scopeInstance.timesTwo();
+//      System.out.println("******");
+//      ScopeCheck.InnerClass innerClass = scopeInstance.new InnerClass();
+//      innerClass.timesTwo();
    }
 }
