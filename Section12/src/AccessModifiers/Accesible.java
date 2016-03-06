@@ -1,0 +1,4 @@
+package AccessModifiers;
+
+interface Accesible {
+}
