@@ -6,12 +6,7 @@ public class Main {
 
       Theatre theatre = new Theatre("Olympium", 8, 12);
 //      theatre.getSeats();
-      if (theatre.reserveSeat("H11")) {
-         System.out.println("please pay");
-      } else {
-         System.out.println("Sorry already taken");
-      }
-      if (theatre.reserveSeat("H11")) {
+      if (theatre.reserveSeat("D12")) {
          System.out.println("please pay");
       } else {
          System.out.println("Sorry already taken");
