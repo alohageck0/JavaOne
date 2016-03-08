@@ -13,7 +13,7 @@ public class MapProgram {
          System.out.println("Java added succeesfuly");
       }
       languages.put("Python", "an interprteded, OO, high-level, with dynamic semantics");
-      languages.put("Argol", "an algorithmic lang");
+      languages.put("Algol", "an algorithmic lang");
       System.out.println(languages.put("Basic", "beginners all purpose symbolic instruction code"));
       languages.put("Lisp", "Therein lies madness");
 
@@ -24,8 +24,23 @@ public class MapProgram {
       }
 
       System.out.println("===========");
+//      languages.remove("Lisp");
+      if (languages.remove("Algol", "an algorithmic lang")) {
+         System.out.println("Algol removed");
+      } else {
+         System.out.println("Algol not removed");
+      }
+
+      if (languages.replace("Lisp", "Therein lies madness", "A func program language")) {
+         System.out.println("Lisp replaced");
+      } else {
+         System.out.println("Lisp was not replaced");
+      }
+//      System.out.println(languages.replace("Scala", "this will not be added"));
       for (String key : languages.keySet()) {
          System.out.println(key + ", " + languages.get(key));
       }
+
+
    }
 }
