@@ -33,10 +33,11 @@ public class Main {
       locations.get(5).addExit("S", 1);
       locations.get(5).addExit("W", 2);
 
-      directions.put("south", "s");
-      directions.put("north", "n");
-      directions.put("west", "w");
-      directions.put("east", "e");
+      directions.put("SOUTH", "S");
+      directions.put("NORTH", "N");
+      directions.put("WEST", "W");
+      directions.put("EAST", "E");
+      directions.put("QUIT", "Q");
 
 
       int loc = 1;
@@ -53,11 +54,14 @@ public class Main {
          }
          System.out.println();
 
-         String[] input = scanner.nextLine().toLowerCase().split(" ");
-         String direction = null;
-         for (String word : input) {
-            if (directions.keySet().contains(word)) {
-               direction = directions.get(word).toUpperCase();
+         String direction = scanner.nextLine().toUpperCase();
+         if (direction.length() > 1) {
+            String[] input = direction.split(" ");
+            for (String word : input) {
+               if (directions.containsKey(word)) {
+                  direction = directions.get(word).toUpperCase();
+                  break;
+               }
             }
          }
 
