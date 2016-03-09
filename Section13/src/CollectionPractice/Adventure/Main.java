@@ -10,11 +10,10 @@ public class Main {
 
    public static void main(String[] args) {
       Scanner scanner = new Scanner(System.in);
+
+      locations.put(0, new Location(0, "location0", null));
+
       Map<String, Integer> tempExit = new HashMap<>();
-
-      locations.put(0, new Location(0, "location0", tempExit));
-
-      tempExit = new HashMap<>();
       tempExit.put("W", 2);
       tempExit.put("E", 3);
       tempExit.put("S", 4);
