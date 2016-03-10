@@ -1,4 +1,4 @@
-package HashSetsPractice;
+package HashSetsPractice.Challenge;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -15,7 +15,7 @@ public class Planet extends HeavenlyBody {
       return this.satellites.add(moon);
    }
 
-   public Set<HeavenlyBody> getSatellites() {
+   public Set<Moon> getSatellites() {
       return new HashSet<>(this.satellites);
    }
 }
