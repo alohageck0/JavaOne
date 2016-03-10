@@ -18,6 +18,10 @@ public class Main {
       solarSystem.put(temp.getName(), temp);
       planets.add(temp);
 
+      temp = new HeavenlyBody("Pluto", 248);
+      solarSystem.put(temp.getName(), temp);
+      planets.add(temp);
+
       temp = new HeavenlyBody("Earth", 265);
       solarSystem.put(temp.getName(), temp);
       planets.add(temp);
@@ -25,6 +29,8 @@ public class Main {
       HeavenlyBody tempMoon = new HeavenlyBody("Moon", 27);
       solarSystem.put(tempMoon.getName(), tempMoon);
       temp.addMoon(tempMoon);
+
+
 
       System.out.println("Planets");
       for (HeavenlyBody planet : planets) {
@@ -44,5 +50,15 @@ public class Main {
       for (HeavenlyBody moon : moons) {
          System.out.println(moon.getName());
       }
+      HeavenlyBody pluto = new HeavenlyBody("Pluto", 842);
+      planets.add(pluto);
+
+      for (HeavenlyBody planet : planets) {
+         System.out.println(planet.getName() + ": " + planet.getOrbitalPeriod());
+      }
+
+      Object o = new Object();
+      o.equals(o);
+      "pluto".equals("");
    }
 }
