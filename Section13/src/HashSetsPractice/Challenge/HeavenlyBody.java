@@ -38,12 +38,14 @@ public class HeavenlyBody {
       String objBodyType = ((HeavenlyBody) obj).getBodyType();
       if (this.name.equals(objName)) {
          if (this.bodyType.equals(objBodyType)) {
-            return false;
-         } else {
             return true;
+         } else {
+            return false;
          }
+
+      } else {
+         return false;
       }
-      return false;
    }
 
    @Override
