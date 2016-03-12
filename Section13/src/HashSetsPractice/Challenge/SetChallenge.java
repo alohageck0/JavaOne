@@ -24,8 +24,7 @@ public class SetChallenge {
 
       getPlanet("Earth").addMoon(getMoon("Moon"));
 
-      ///update
-//      todo next
+      printSystem(solarSystem);
    }
 
    public static Planet getPlanet(String name) {
@@ -44,5 +43,11 @@ public class SetChallenge {
          }
       }
       return null;
+   }
+
+   public static void printSystem(Set<HeavenlyBody> set) {
+      for (HeavenlyBody planet : set) {
+         System.out.println(planet.getName() + ": " + planet.getOrbitalPeriod());
+      }
    }
 }
