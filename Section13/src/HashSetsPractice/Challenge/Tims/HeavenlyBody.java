@@ -3,13 +3,13 @@ package HashSetsPractice.Challenge.Tims;
 import java.util.HashSet;
 import java.util.Set;
 
-public class HeavenlyBody {
+public abstract class HeavenlyBody {
    private final String name;
    private final double orbitalPeriod;
    private final Set<HeavenlyBody> satellites;
    private final BodyTypes bodyType;
 
-   private enum BodyTypes {
+   public enum BodyTypes {
       STAR, PLANET, MOON, DWARF_PLANET, COMET, ASTEROID
    }
 
