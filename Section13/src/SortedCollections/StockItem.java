@@ -3,7 +3,7 @@ package SortedCollections;
 public class StockItem implements Comparable<StockItem> {
    private final String name;
    private double price;
-   private int quantityStock; //initialize later
+   private int quantityStock;
 
    public StockItem(String name, double price) {
       this.name = name;
