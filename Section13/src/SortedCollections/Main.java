@@ -1,5 +1,7 @@
 package SortedCollections;
 
+import java.util.Map;
+
 public class Main {
    private static StockList stockList = new StockList();
 
@@ -36,18 +38,29 @@ public class Main {
       sellItem(basket, "car", 1);
       System.out.println(basket);
 
-      sellItem(basket,"car",1);
+      sellItem(basket, "car", 1);
       System.out.println(basket);
 
-      sellItem(basket,"car",1);
-      sellItem(basket,"spanner",5);
+      sellItem(basket, "car", 1);
+      sellItem(basket, "spanner", 5);
       System.out.println(basket);
 
-      sellItem(basket,"juice",4);
-      sellItem(basket,"cup",12);
-      sellItem(basket,"bread",1);
+      sellItem(basket, "juice", 4);
+      sellItem(basket, "cup", 12);
+      sellItem(basket, "bread", 1);
       System.out.println(basket);
       System.out.println(stockList);
+
+//      temp = new StockItem("pen",1.12);
+//      stockList.Items().put(temp.getName(),temp);
+
+      stockList.Items().get("car").adjustStock(2000);
+      stockList.get("car").adjustStock(-1000);
+      System.out.println(stockList);
+      for (Map.Entry<String, Double> price : stockList.PriceList().entrySet()) {
+         System.out.println(price.getKey() + " costs " + price.getValue());
+      }
+
 
    }
 
