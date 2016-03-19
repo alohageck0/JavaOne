@@ -34,6 +34,15 @@ public class StockList {
       return 0;
    }
 
+   public int reserveStock(String item, int quantity) {
+      StockItem inStock = list.getOrDefault(item, null);
+      if (inStock != null) {
+         inStock.reserveItems(quantity);
+         return quantity;
+      }
+      return 0;
+   }
+
    public StockItem get(String itemName) {
       return this.list.get(itemName);
    }
