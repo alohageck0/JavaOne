@@ -42,6 +42,7 @@ public class MainChallenge {
       System.out.println(basket);
 
       reserveItem(basket, "car", 1);
+      unreserveItem(basket, "car", 1);
       System.out.println(stockList.get("car").getReserved());
       reserveItem(basket, "spanner", 5);
       System.out.println(basket);
@@ -56,7 +57,7 @@ public class MainChallenge {
 
       System.out.println(stockList);
 
-
+//todo unreserve functionality
    }
 
    public static int reserveItem(Basket basket, String item, int quantity) {
