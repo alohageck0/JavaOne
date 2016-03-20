@@ -30,9 +30,9 @@ public class MainChallenge {
       stockList.addStock(temp);
 
 //      System.out.println(stockList);
-      for (String s : stockList.Items().keySet()) {
-         System.out.println(s);
-      }
+//      for (String s : stockList.Items().keySet()) {
+//         System.out.println(s);
+//      }
 
       Basket basket = new Basket("Evgenii");
       reserveItem(basket, "car", 1);
@@ -42,6 +42,7 @@ public class MainChallenge {
       System.out.println(basket);
 
       reserveItem(basket, "car", 1);
+      System.out.println(stockList.get("car").getReserved());
       reserveItem(basket, "spanner", 5);
       System.out.println(basket);
 
@@ -65,7 +66,7 @@ public class MainChallenge {
          System.out.println("We do not's sell " + item);
          return 0;
       }
-      if (stockList.reserveStock(item, quantity) != 0) {
+      if (stockList.reserveStock(item, quantity) > 0) {
          basket.addToBasket(stockItem, quantity);
          return quantity;
       }
