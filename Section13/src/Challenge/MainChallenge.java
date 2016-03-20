@@ -75,8 +75,10 @@ public class MainChallenge {
    }
 
    public static int unreserveItem(Basket basket, String item, int quantity) {
+      System.out.println("unreserving "+ item);
       StockItem stockItem = stockList.get(item);
-      return stockItem.unreserveItems(quantity);
+      stockItem.unreserveItems(quantity);
+      return basket.removeFormBasket(stockItem, quantity);
    }
 
    public static void checkOutBasket(Basket basket) {

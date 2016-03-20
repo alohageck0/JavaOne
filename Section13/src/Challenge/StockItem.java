@@ -28,7 +28,7 @@ public class StockItem implements Comparable<StockItem> {
    public int reserveItems(int quantity) {
       if (available(quantity)) {
          this.reserved += quantity;
-         System.out.println("You've reserved " + quantity + " of " + this.name + "\nTotal reserved " + this.reserved);
+         System.out.println("\nYou've reserved " + quantity + " of " + this.name + "\nTotal reserved " + this.reserved);
          return quantity;
       }
       System.out.println(this.name + " out of stock");

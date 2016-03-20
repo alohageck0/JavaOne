@@ -22,6 +22,21 @@ public class Basket {
       return 0;
    }
 
+   public int removeFormBasket(StockItem item, int quantity) {
+      if (item != null && quantity > 0) {
+         System.out.println("Deleting " + item + " from basket");
+         int inBasket = list.getOrDefault(item, 0);
+         if (inBasket > quantity) {
+            list.put(item, inBasket - quantity);
+            return inBasket - quantity;
+         } else {
+            list.remove(item);
+            return 0;
+         }
+      }
+      return 0;
+   }
+
 
    public Map<StockItem, Integer> Items() {
       return Collections.unmodifiableMap(list);
@@ -32,7 +47,7 @@ public class Basket {
       String s = "\nShopping Basket " + name + " contains " + list.size() + ((list.size() == 1) ? " item" : " items") + "\n";
       double totalCost = 0.0;
       for (Map.Entry<StockItem, Integer> item : list.entrySet()) {
-         s = s + item.getKey() + ". " + item.getValue() + " purchsed\n";
+         s = s + item.getKey() + ". " + item.getValue() + " reserved\n";
          totalCost += item.getKey().getPrice() * item.getValue();
 
       }
