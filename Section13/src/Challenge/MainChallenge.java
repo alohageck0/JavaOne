@@ -51,6 +51,7 @@ public class MainChallenge {
       System.out.println(basket);
 
       reserveItem(basket, "juice", 4);
+      unreserveItem(basket,"dfsdfs",23);
       reserveItem(basket, "cup", 12);
       reserveItem(basket, "bread", 1);
       System.out.println(basket);
@@ -80,8 +81,14 @@ public class MainChallenge {
    public static int unreserveItem(Basket basket, String item, int quantity) {
       System.out.println("unreserving "+ item);
       StockItem stockItem = stockList.get(item);
-      stockItem.unreserveItems(quantity);
-      return basket.removeFormBasket(stockItem, quantity);
+      if (stockItem!=null){
+         stockItem.unreserveItems(quantity);
+         return basket.removeFormBasket(stockItem, quantity);
+
+      }else {
+         System.out.println("there is no such an item");
+      }
+      return 0;
    }
 
    public static void checkOutBasket(Basket basket) {
