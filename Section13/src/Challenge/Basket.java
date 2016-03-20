@@ -29,9 +29,11 @@ public class Basket {
          if (inBasket > quantity) {
             list.put(item, inBasket - quantity);
             return inBasket - quantity;
-         } else {
+         } else if (inBasket == quantity) {
             list.remove(item);
             return 0;
+         } else {
+            System.out.println("You reserved " + inBasket + " items. You can not unreserve " + quantity);
          }
       }
       return 0;

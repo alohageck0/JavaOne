@@ -35,8 +35,11 @@ public class MainChallenge {
 //      }
 
       Basket basket = new Basket("Evgenii");
+      Basket bin1 = new Basket("test");
       reserveItem(basket, "car", 1);
+      reserveItem(bin1,"car",1);
       System.out.println(basket);
+      System.out.println(bin1);
 
       reserveItem(basket, "car", 1);
       System.out.println(basket);
