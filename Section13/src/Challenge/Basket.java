@@ -21,15 +21,7 @@ public class Basket {
       }
       return 0;
    }
-   public int reserveToBasket(StockItem item, int quantity){
-      if (item != null && quantity > 0) {
-         int inBasket = list.getOrDefault(item, 0);
-         list.put(item, inBasket + quantity);
-         item.reserveItems(quantity);
-         return inBasket;
-      }
-      return 0;
-   }
+
 
    public Map<StockItem, Integer> Items() {
       return Collections.unmodifiableMap(list);
@@ -46,5 +38,16 @@ public class Basket {
       }
       return s + "Total cost " + String.format("%.2f", totalCost);
    }
+
+   public void clearBasket() {
+      this.list.clear();
+   }
+
+//   public void checkOutBasket() {
+//      for (Map.Entry<StockItem, Integer> entry : list.entrySet()) {
+//         entry.getKey().checkOutItem(entry.getValue());
+//      }
+//      clearBasket();
+//   }
 
 }

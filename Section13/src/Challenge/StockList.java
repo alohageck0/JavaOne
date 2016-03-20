@@ -43,6 +43,11 @@ public class StockList {
       return 0;
    }
 
+   public void checkOut(StockItem stockItem, int quantity) {
+      stockItem.checkOutItem(quantity);
+      System.out.println("You purchased " + quantity + " of " + stockItem.getName());
+   }
+
    public StockItem get(String itemName) {
       return this.list.get(itemName);
    }
@@ -68,7 +73,7 @@ public class StockList {
          StockItem stockItem = itemEntry.getValue();
 
          double itemValue = stockItem.getPrice() * stockItem.quantityInStock();
-         s = s + stockItem + ". There are " + stockItem.quantityInStock() + " in stock. "+stockItem.getReserved()+" reserved. Value of items: ";
+         s = s + stockItem + ". There are " + stockItem.quantityInStock() + " in stock. " + stockItem.getReserved() + " reserved. Value of items: ";
          s = s + String.format("%.2f", itemValue) + "\n";
          totalCost += itemValue;
 
