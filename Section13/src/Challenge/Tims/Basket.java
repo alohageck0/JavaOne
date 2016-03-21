@@ -22,6 +22,7 @@ public class Basket {
       return 0;
    }
 
+
    public int removeFromBasket(StockItem item, int quantity) {
       if (item != null && quantity > 0) {
          // check if already have item in basket
@@ -36,6 +37,10 @@ public class Basket {
          }
       }
       return 0;
+   }
+
+   public void clearBasket() {
+      this.list.clear();
    }
 
    public Map<StockItem, Integer> Items() {
