@@ -14,7 +14,7 @@ public class MapProgram {
       }
       languages.put("Python", "an interprteded, OO, high-level, with dynamic semantics");
       languages.put("Algol", "an algorithmic lang");
-      System.out.println(languages.put("Basic", "beginners all purpose symbolic instruction code"));
+      System.out.println(languages.put("basic", "beginners all purpose symbolic instruction code"));
       languages.put("Lisp", "Therein lies madness");
 
       if (languages.containsKey("Java")) {
