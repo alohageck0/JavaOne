@@ -31,6 +31,9 @@ public class Main {
       System.out.println(fibo(10));
       System.out.println(fiboRecursive(10));
       System.out.println(fiboIter(10));
+      System.out.println(reverse(12345));
+
+      System.out.println(polindromeNum(8383833));
    }
 
    public static String reverseString(String string) {
@@ -84,5 +87,24 @@ public class Main {
          fiboImin1 = fibo;
       }
       return fibo;
+   }
+
+   public static boolean polindromeNum(int number) {
+      if (number == reverse(number)) {
+         return true;
+      }
+
+      return false;
+   }
+
+   private static int reverse(int number) {
+      int reminder;
+      int reverse = 0;
+      while (number > 0) {
+         reminder = number % 10;
+         reverse = reverse * 10 + reminder;
+         number /= 10;
+      }
+      return reverse;
    }
 }
