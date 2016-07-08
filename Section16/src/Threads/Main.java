@@ -24,8 +24,15 @@ public class Main {
          @Override
          public void run() {
             System.out.println(ANSI_RED + "Hello from anon implementation ");
+            try {
+               anotherThread.join(2000);
+               System.out.println(ANSI_RED + "Another thread terminated, so I'm running again");
+            } catch (InterruptedException e) {
+               System.out.println(ANSI_RED + "I couldn't wait after all. I was interrupted");
+            }
          }
       }.start();
+//      anotherThread.interrupt();
 
       System.out.println(ANSI_PURPLE + "Again from maIn thread");
    }
