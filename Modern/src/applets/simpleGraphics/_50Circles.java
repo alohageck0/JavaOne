@@ -1,27 +1,28 @@
 package applets.simpleGraphics;
 
-import java.applet.Applet;
+import javax.swing.*;
 import java.awt.*;
 
-public class _50Circles extends Applet {
+public class _50Circles extends JPanel {
    private int width, heigth;
    private int radius = 10;
 
    @Override
-   public void init() {
+   protected void paintComponent(Graphics g) {
+      super.paintComponent(g);
       this.width = getWidth();
       this.heigth = getHeight();
       setBackground(Color.RED);
       setForeground(Color.YELLOW);
-   }
-
-   @Override
-   public void paint(Graphics g) {
-
       for (int i = 0; i < 50; i++) {
          int coordX = (int) Math.abs(Math.random() * width - radius);
          int coordY = (int) Math.abs(Math.random() * heigth - radius);
          g.fillOval(coordX, coordY, radius, radius);
       }
    }
+
+   public static void main(String[] args) {
+      new _50Circles();
+   }
+
 }
