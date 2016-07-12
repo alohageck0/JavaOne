@@ -1,4 +1,4 @@
-package Applets.simpleGraphics;
+package applets.simpleGraphics;
 
 public class TicTacToe {
 }
