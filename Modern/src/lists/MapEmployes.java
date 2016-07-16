@@ -10,9 +10,10 @@ public class MapEmployes {
    static Map<String, String> map = new HashMap<>();
 
    @Test
-   public void test(){
+   public void test() {
       Assert.assertEquals(getName("a1235"), "Scott McNealy");
       Assert.assertEquals(getName("a1237"), "Bill Gates");
+      Assert.assertEquals(getName("A1237"), "Bill Gates");
       Assert.assertEquals(getName("a1232"), "No such ID");
       Assert.assertEquals(getName("a1236"), "Jeff Bezos");
    }
@@ -25,8 +26,9 @@ public class MapEmployes {
    }
 
    public String getName(String id) {
-      if (map.containsKey(id)) {
-         return map.get(id);
+      String key = id.toLowerCase();
+      if (map.containsKey(key)) {
+         return map.get(key);
       } else {
          return "No such ID";
       }
