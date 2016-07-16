@@ -17,5 +17,6 @@ public class Main {
       System.out.println("Contains Joe - " + containsJoe);
       names.remove("Cay");
       System.out.println(names);
+      System.out.println(names.get(names.size()/2));
    }
 }
