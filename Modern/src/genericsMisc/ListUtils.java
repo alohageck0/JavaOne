@@ -19,12 +19,23 @@ public class ListUtils {
 
       wordList = Arrays.asList(stringList);
       String lastWord = ListUtils.lastEntry(wordList);
+      String lastWord1 = ListUtils.lastEntry(stringList);
+
       System.out.println(lastWord);
+      System.out.println(lastWord1);
    }
 
    static <T> T lastEntry(List<T> list) {
       if (list.size() > 0) {
          return list.get(list.size() - 1);
+      } else {
+         return null;
+      }
+   }
+
+   static <T> T lastEntry(T[] list) {
+      if (list.length > 0) {
+         return list[list.length - 1];
       } else {
          return null;
       }
