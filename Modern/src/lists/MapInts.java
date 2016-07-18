@@ -3,7 +3,9 @@ package lists;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class MapInts {
@@ -16,6 +18,11 @@ public class MapInts {
       Assert.assertEquals(getIntWord(2), "two");
       Assert.assertEquals(getIntWord(44), "No such ID");
       Assert.assertEquals(getIntWord(5), "No such ID");
+
+      String[] test = wordsForNumbers(1,4,3,6);
+      for (String s:test){
+         System.out.println(s);
+      }
    }
 
    static {
@@ -31,5 +38,17 @@ public class MapInts {
       } else {
          return "No such ID";
       }
+   }
+
+   public String[] wordsForNumbers(int... numbers) {
+      List<String> words = new ArrayList<>();
+      String[] result;
+      for (int number : numbers)
+         if (map.containsKey(number)) {
+            words.add(map.get(number));
+         }
+      result = new String[words.size()];
+      result = words.toArray(result);
+      return result;
    }
 }

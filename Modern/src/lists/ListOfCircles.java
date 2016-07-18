@@ -17,7 +17,7 @@ public class ListOfCircles {
          }
       }
       for (int i = 0; i < listOfCircles.size(); i++) {
-         System.out.printf("Area of circle %4d: %4.2f%n", i, listOfCircles.get(i).getArea());
+         System.out.printf("Area of circle %4d: %5.3f%n", i, listOfCircles.get(i).getArea());
       }
    }
 }
