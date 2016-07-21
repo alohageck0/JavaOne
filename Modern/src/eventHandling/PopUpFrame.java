@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class PopUpFrame extends JFrame {
    public PopUpFrame() throws HeadlessException {
-      setContentPane(new ClickRedBlueInterface());
+      setContentPane(new ClickRedBlueInnerNamed());
       setSize(100, 100);
       setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
       setVisible(true);

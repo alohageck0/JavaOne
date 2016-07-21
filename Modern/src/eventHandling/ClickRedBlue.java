@@ -7,6 +7,6 @@ public class ClickRedBlue extends JPanel {
 
    public ClickRedBlue() {
       setBackground(Color.RED);
-      addMouseListener(new MouseListener(this));
+      addMouseListener(new MouseListener());
    }
 }
