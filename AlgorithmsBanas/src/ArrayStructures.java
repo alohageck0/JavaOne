@@ -259,7 +259,17 @@ public class ArrayStructures {
    // only partially sorted here.
 
    public void insertionSort() {
-
+      for (int i = 1; i < arraySize; i++) {
+         int toInsert = theArray[i];
+         int j = i;
+         while ((j > 0) && (theArray[j - 1] > toInsert)) {
+            theArray[j] = theArray[j - 1];
+            j--;
+            printHorzArray(i, j);
+         }
+         theArray[j] = toInsert;
+         printHorzArray(i, j);
+      }
 
    }
 
@@ -279,9 +289,9 @@ public class ArrayStructures {
 
 //      newArray.binarySearchForValue(17);
 
-      newArray.selectionSort();
+//      newArray.selectionSort();
 
-//      newArray.insertionSort();
+      newArray.insertionSort();
 
    }
 
