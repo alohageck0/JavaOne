@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AlgorithmsBanas/AlgorithmsBanas.iml" filepath="$PROJECT_DIR$/AlgorithmsBanas/AlgorithmsBanas.iml" />
       <module fileurl="file://$PROJECT_DIR$/ArrayLists/ArrayLists.iml" filepath="$PROJECT_DIR$/ArrayLists/ArrayLists.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arrays/Arrays.iml" filepath="$PROJECT_DIR$/Arrays/Arrays.iml" />
       <module fileurl="file://$PROJECT_DIR$/ByteShortInt/ByteShortInt.iml" filepath="$PROJECT_DIR$/ByteShortInt/ByteShortInt.iml" />
