@@ -220,9 +220,9 @@ public class ArrayStructures {
       while (lowerIndex <= highIndex) {
          int middleIndex = (lowerIndex + highIndex) / 2;
          if (theArray[middleIndex] > value) {
-            lowerIndex = middleIndex;
-         } else if (theArray[middleIndex] < value) {
             highIndex = middleIndex;
+         } else if (theArray[middleIndex] < value) {
+            lowerIndex = middleIndex;
          } else {
             System.out.println("\nFound at index " + middleIndex);
 
@@ -267,7 +267,7 @@ public class ArrayStructures {
 
       // We must Sort first
 
-//      newArray.binarySearchForValue(17);
+      newArray.binarySearchForValue(17);
 
       // newArray.selectionSort();
 
