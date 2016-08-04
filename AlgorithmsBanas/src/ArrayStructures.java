@@ -239,7 +239,17 @@ public class ArrayStructures {
    // through the entire array each time
 
    public void selectionSort() {
+      for (int i = 0; i < arraySize; i++) {
+         int minimum = i;
 
+         for (int j = i; j < arraySize; j++) {
+            if (theArray[minimum] > theArray[j]) {
+               minimum = j;
+            }
+         }
+         swapValues(i, minimum);
+         printHorzArray(i, -1);
+      }
 
    }
 
@@ -263,13 +273,13 @@ public class ArrayStructures {
 
       // newArray.linearSearchForValue(10);
 
-      newArray.bubbleSort();
+//      newArray.bubbleSort();
 
       // We must Sort first
 
-      newArray.binarySearchForValue(17);
+//      newArray.binarySearchForValue(17);
 
-      // newArray.selectionSort();
+      newArray.selectionSort();
 
 //      newArray.insertionSort();
 
