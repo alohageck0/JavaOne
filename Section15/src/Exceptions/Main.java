@@ -1,7 +1,11 @@
 package Exceptions;
 
 import java.util.InputMismatchException;
+import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.Scanner;
+
+import static javafx.scene.input.KeyCode.Q;
 
 public class Main {
    public static void main(String[] args) {
@@ -10,16 +14,17 @@ public class Main {
 //
 //      System.out.println(divideLBYL(x, y));
 //      System.out.println(divideEAFP(x, y));
-     try {
-        test(x, y);
-     }catch (ArithmeticException e){
-        System.out.println(e);
-     } finally {
-        System.out.println("Finally excecuted");
-     }
+      try {
+         test(x, y);
+      } catch (ArithmeticException e) {
+         System.out.println(e);
+      } finally {
+         System.out.println("Finally excecuted");
+      }
 
 //      int x = getIntEAFP();
       System.out.println("x is " + x);
+
    }
 
    private static int getInt() {
