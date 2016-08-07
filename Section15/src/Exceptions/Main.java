@@ -5,14 +5,20 @@ import java.util.Scanner;
 
 public class Main {
    public static void main(String[] args) {
-//      int x = 98;
-//      int y = 0;
+      int x = 98;
+      int y = 0;
 //
 //      System.out.println(divideLBYL(x, y));
 //      System.out.println(divideEAFP(x, y));
-//      System.out.println(divide(x, y));
+     try {
+        test(x, y);
+     }catch (ArithmeticException e){
+        System.out.println(e);
+     } finally {
+        System.out.println("Finally excecuted");
+     }
 
-      int x = getIntEAFP();
+//      int x = getIntEAFP();
       System.out.println("x is " + x);
    }
 
@@ -64,9 +70,17 @@ public class Main {
       }
    }
 
-   private static int divide(int x, int y) {
-
+   private static int divide(int x, int y) throws ArithmeticException {
+      if (y == 0) {
+         throw new ArithmeticException("Test exception");
+      }
       return x / y;
 
    }
+
+   public static void test(int x, int y) {
+      System.out.println(divide(x, y));
+   }
+
+
 }
