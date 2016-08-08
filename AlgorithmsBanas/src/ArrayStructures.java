@@ -15,6 +15,17 @@ public class ArrayStructures {
 
    }
 
+   public int[] generateRandomArr() {
+      int[] theArray = new int[50];
+      for (int i = 0; i < arraySize; i++) {
+
+         theArray[i] = (int) (Math.random() * 10) + 10;
+
+      }
+      return theArray;
+
+   }
+
    public void printArray() {
 
       System.out.println("----------");
@@ -281,6 +292,19 @@ public class ArrayStructures {
 
       newArray.printHorzArray(-1, -1);
 
+      int[] unsorted = newArray.generateRandomArr();
+
+      for (int num:unsorted){
+         System.out.print(num+ " ");
+      }
+      System.out.println();
+      int[] sorted = newArray.mergeSort(unsorted);
+      for (int num:sorted){
+         System.out.print(num+ " ");
+      }
+
+
+
       // newArray.linearSearchForValue(10);
 
 //      newArray.bubbleSort();
@@ -291,8 +315,55 @@ public class ArrayStructures {
 
 //      newArray.selectionSort();
 
-      newArray.insertionSort();
+//      newArray.insertionSort();
 
+
+   }
+
+   private int[] mergeSort(int[] arr) {
+      if (arr.length < 2) {
+         return arr;
+      } else {
+         int middle = arr.length / 2;
+         int[] left = new int[middle];
+         int[] right = new int[arr.length - middle];
+         System.arraycopy(arr, 0, left, 0, left.length);
+         System.arraycopy(arr, middle, right, 0, right.length);
+         mergeSort(left);
+         mergeSort(right);
+         mergeArrays(left, right, arr);
+      }
+      return arr;
+
+   }
+
+   private int[] mergeArrays(int[] left, int[] right, int[] arr) {
+      int leftIndex = 0;
+      int rightIndex = 0;
+      int arrIndex = 0;
+
+      while (leftIndex < left.length && rightIndex < right.length) {
+         if (left[leftIndex] >= right[rightIndex]) {
+            arr[arrIndex] = right[rightIndex];
+            arrIndex++;
+            rightIndex++;
+         } else {
+            arr[arrIndex] = left[leftIndex];
+            arrIndex++;
+            leftIndex++;
+         }
+      }
+      while (leftIndex < left.length) {
+         arr[arrIndex] = left[leftIndex];
+         arrIndex++;
+         leftIndex++;
+      }
+      while (rightIndex < right.length) {
+         arr[arrIndex] = right[rightIndex];
+         arrIndex++;
+         rightIndex++;
+      }
+      return arr;
    }
 
 
