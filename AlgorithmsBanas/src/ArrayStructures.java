@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class ArrayStructures {
 
@@ -294,14 +295,11 @@ public class ArrayStructures {
 
       int[] unsorted = newArray.generateRandomArr();
 
-      for (int num:unsorted){
-         System.out.print(num+ " ");
-      }
+      System.out.println(Arrays.toString(unsorted));
       System.out.println();
       int[] sorted = newArray.mergeSort(unsorted);
-      for (int num:sorted){
-         System.out.print(num+ " ");
-      }
+      System.out.println(Arrays.toString(sorted));
+
 
 
 
