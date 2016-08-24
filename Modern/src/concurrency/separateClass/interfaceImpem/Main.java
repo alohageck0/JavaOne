@@ -1,8 +1,7 @@
-package concurrency;
+package concurrency.separateClass.interfaceImpem;
 
 public class Main {
    public static void main(String[] args) {
-      new App1();
+      new App2(4);
    }
-
 }

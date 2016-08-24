@@ -1,4 +1,4 @@
-package concurrency;
+package concurrency.separateClass;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

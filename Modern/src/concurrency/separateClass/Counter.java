@@ -1,4 +1,4 @@
-package concurrency;
+package concurrency.separateClass;
 
 public class Counter implements Runnable {
    private final App1 mainApp;
