@@ -17,16 +17,16 @@ public class Main {
          }
       }.start();
 //
-//      Thread myRunnable = new Thread(new MyRunnable());
-//      myRunnable.start();
-
+      Thread myRunnable = new Thread(new MyRunnable());
+      myRunnable.start();
+//
       new Thread(new MyRunnable()) {
          @Override
          public void run() {
             System.out.println(ANSI_RED + "Hello from anon implementation ");
             try {
                anotherThread.join(2000);
-               System.out.println(ANSI_RED + "Another thread terminated, so I'm running again");
+               System.out.println(ANSI_RED + "AnotherThread terminated, so anon is running again");
             } catch (InterruptedException e) {
                System.out.println(ANSI_RED + "I couldn't wait after all. I was interrupted");
             }
@@ -34,6 +34,6 @@ public class Main {
       }.start();
 //      anotherThread.interrupt();
 
-      System.out.println(ANSI_PURPLE + "Again from maIn thread");
+      System.out.println(ANSI_PURPLE + "Hello again from main thread");
    }
 }
